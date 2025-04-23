@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card mb-4 mood-input-card">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">How are you feeling today?</h2>
+
+                <form action="/" method="post">
+                    <div class="mb-3">
+                        <label for="user_text" class="form-label">Express yourself freely:</label>
+                        <textarea class="form-control" id="user_text" name="user_text" rows="4" placeholder="Tell me about your day, your thoughts, your feelings...">{{ user_text }}</textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-brain me-2"></i>  Analyze my mood
+                        </button>
+                        {% if mood %}
+                        <button type="submit" class="btn btn-outline-secondary btn-lg ms-2" formaction="/reset">
+                            <i class="fas fa-redo-alt me-2"></i> Reset
+                        </button>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {% if mood %}
+        <div class="card result-card">
+            <div class="card-body">
+                <div class="mood-result mb-4">
+                    <h3 class="text-center mb-3"> Your detected mood</h3>
+                    <div class="mood-indicator text-center">
+                        <span class="mood-emoji">{{ emoji }}</span>
+                        <h4 class="mood-text">{{ mood|capitalize }}</h4>
+                        <div class="mood-score">Analysis score:  {{ score|format_score }}</div>
+                    </div>
+                </div>
+
+                <div class="recommendation">
+                    <h3 class="text-center mb-3">Our music recommendation</h3>
+                    <div class="recommendation-card">
+                        <h4 class="genre">{{ recommendation.genre }}</h4>
+                        <p class="description">{{ recommendation.description }}</p>
+                        <div class="text-center mt-4">
+                            <a href="{{ recommendation.spotify_url }}" target="_blank" class="btn btn-success">
+                                <i class="fab fa-spotify me-2"></i> Listen on Spotify
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="card info-card">
+            <div class="card-body">
+                <h3 class="text-center mb-3">How does it work?</h3>
+                <div class="info-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4><i class="fas fa-keyboard me-2"></i> Express yourself</h4>
+                            <p>Freely write what you feel in the text field above.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4><i class="fas fa-brain me-2"></i> AI analysis</h4>
+                            <p>Our algorithm analyzes the text and determines your current mood.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4><i class="fas fa-music me-2"></i> Recommandation</h4>
+                            <p>Discover a Spotify playlist that perfectly matches your emotional state.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="text-muted"><i class="fas fa-shield-alt me-2"></i>  Your text is analyzed locally and is never stored.</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
