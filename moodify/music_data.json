@@ -1,0 +1,68 @@
+{
+    "happy": [
+      {
+        "genre": "Upbeat Pop",
+        "description": "Energetic pop music to celebrate your good mood!",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX0hWmn8d5pRe"
+      },
+      {
+        "genre": "Dance & Electronic",
+        "description": "Electronic rhythms to maintain your positive energy!",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw"
+      },
+      {
+        "genre": "Positive Hits",
+        "description": "Big hits that spread joy and good vibes!",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
+      },
+      {
+        "genre": "Feel-Good Classics",
+        "description": "Timeless tracks that instantly put you in a good mood!",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC"
+      }
+    ],
+    "neutral": [
+      {
+        "genre": "Indie Chill",
+        "description": "Relaxing indie music that accompanies you without distracting.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DWWpVs4onVKxP"
+      },
+      {
+        "genre": "Jazz Ambiance",
+        "description": "Soft jazz for a relaxed atmosphere.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo"
+      },
+      {
+        "genre": "Light Classical",
+        "description": "Light classical compositions to accompany your day.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DWVFeEut75IAL"
+      },
+      {
+        "genre": "Lo-Fi Beats",
+        "description": "Lo-fi rhythms perfect for concentration and relaxation.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn"
+      }
+    ],
+    "sad": [
+      {
+        "genre": "Emotional Ballads",
+        "description": "Ballads that understand your emotions and comfort you.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DWZqdNJKTRBst"
+      },
+      {
+        "genre": "Soul & R&B",
+        "description": "Deep soul to express and transform your emotions.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX2SK4ytI2KAZ"
+      },
+      {
+        "genre": "Melancholic Acoustic",
+        "description": "Soft acoustic melodies to accompany you in difficult moments.",
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX4E3UdUs7fUx"
+      },
+      {
+        "genre": "Contemplative Piano",
+        "description": "Soothing piano pieces for a moment of introspection.",  
+        "spotify_url": "https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO"
+      }
+    ]
+  }
